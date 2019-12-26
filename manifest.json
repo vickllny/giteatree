@@ -1,0 +1,42 @@
+{
+    "manifest_version": 2,
+    "name": "giteatree",
+    "version": "0.0.1",
+    "description": "An chrome plugin whick like `octotree`",
+    "icons": {
+        "16": "img/tree-16.png",
+        "48": "img/tree-48.png",
+        "128": "img/tree-128.png"
+    },
+    "default_locale": "en",
+    "content_scripts": [
+        {
+            "matches": ["http://git.wisesoft.net.cn/*/*"],
+            "js": ["js/jquery.min.js","third-party/ztree/js/jquery.ztree.all-3.5.min.js","js/content.js"],
+            "run_at": "document_start",
+            "css": ["css/content.css","third-party/ztree/css/zTreeStyle.css"]
+        }
+    ],
+    "permissions":
+    [
+        "contextMenus", 
+        "tabs", 
+        "notifications", 
+        "webRequest", 
+        "webRequestBlocking",
+        "storage", 
+        "http://*/*", 
+        "https://*/*" 
+    ],
+    "web_accessible_resources": ["*.png","*.gif"],
+    "options_page": "options.html",
+    "options_ui":
+    {
+        "page": "options.html",
+        "chrome_style": true
+    },
+    "omnibox": { 
+        "keyword" : "go" 
+    },
+    "devtools_page": "devtools.html"
+}

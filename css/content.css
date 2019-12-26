@@ -1,0 +1,14 @@
+nav.gitea-sidebar {
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    padding-top: 64px;
+    position: fixed;
+    z-index: 100000000;
+    right: 0px !important;
+    left: 0px !important;
+    top: 0px !important;
+    bottom: 0px !important;
+    overflow: visible;
+    width: 11%;
+    background-color: #FAFAFA;
+}
